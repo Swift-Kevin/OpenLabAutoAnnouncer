@@ -1,12 +1,12 @@
 #pragma once
 
 #include "inicpp.h"
-#include <chrono>
+#include "Utilities.h"
 
 class Configs : public ini::IniFile
 {
 public:
 	Configs();
-	virtual ~Configs();
+	void Shutdown();
 };
 

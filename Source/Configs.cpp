@@ -42,7 +42,7 @@ Configs::Configs()
 	}
 }
 
-Configs::~Configs()
+void Configs::Shutdown()
 {
 	// Save current state of .ini to disk
 	// Could be used for persisting user prefrences, highscores, savegames etc...

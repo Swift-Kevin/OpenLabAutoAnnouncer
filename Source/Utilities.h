@@ -3,7 +3,7 @@
 #pragma warning(disable : 4996)
 #include <chrono>
 
-enum SuffixType {
+static enum SuffixType {
     Default,
     ShortTime = 't',
     LongTime = 'T',
@@ -24,7 +24,7 @@ public:
         suffix = option;
     }
 
-	static std::string GetCurrentTime()
+	static std::string GetCurrTime()
 	{
         return GetTimeFromOffset();
 	}

@@ -1,34 +1,97 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Files">
+    <Filter Include="ImGui">
+      <UniqueIdentifier>{7bf8ff53-2685-44cf-9db4-a94629c3f2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
+    <Filter Include="Ini">
+      <UniqueIdentifier>{1e4bd3e2-686e-4d6a-ab32-8c1a77bbafe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source\RunnerCode">
+      <UniqueIdentifier>{2e4b2392-2d18-459f-ae53-eb46436a8cdd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="inicpp.h">
-      <Filter>Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Configs.h">
-      <Filter>Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Utilities.h">
-      <Filter>Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="OpenLabAutoAnnouncer.cpp">
-      <Filter>Files</Filter>
+    <ClCompile Include="..\Source\Configs.cpp">
+      <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="Configs.cpp" />
+    <ClCompile Include="..\Source\OpenLabAutoAnnouncer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_demo.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_draw.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_impl_sdl2.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_impl_sdlrenderer2.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_tables.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ImGui\imgui_widgets.cpp">
+      <Filter>ImGui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\App.cpp">
+      <Filter>Source\RunnerCode</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Source\Configs.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Utilities.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imconfig.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imgui.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imgui_impl_sdl2.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imgui_impl_sdlrenderer2.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imgui_internal.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imstb_rectpack.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imstb_textedit.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ImGui\imstb_truetype.h">
+      <Filter>ImGui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\inicpp.h">
+      <Filter>Ini</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\Defines.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\App.h">
+      <Filter>Source\RunnerCode</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
     <None Include="defaults.ini">
-      <Filter>Files</Filter>
-    </None>
-    <None Include="saved.ini">
-      <Filter>Files</Filter>
+      <Filter>Ini</Filter>
     </None>
   </ItemGroup>
 </Project>
