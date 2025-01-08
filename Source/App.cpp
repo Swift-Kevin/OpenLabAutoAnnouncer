@@ -5,16 +5,20 @@ App::App()
 	winTitle = config.at("Project").at("title").as<std::string>();
 	winWidth = config.at("Project").at("winWidth").as<int>();
 	winHeight = config.at("Project").at("winHeight").as<int>();
-
+	
+	SDL_DisplayMode displayMode;
+	SDL_GetCurrentDisplayMode(0, &displayMode);
+	scrWidth = displayMode.w;
+	scrHeight = displayMode.h;
 }
 
 bool App::Init()
 {
 	SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_GAMECONTROLLER);
-	window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI);
+	window_flags = (SDL_WindowFlags)(SDL_WINDOW_RESIZABLE | SDL_WINDOW_ALLOW_HIGHDPI | SDL_WINDOW_BORDERLESS);
 
 	window = SDL_CreateWindow(winTitle.c_str(), 
-		SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, winWidth, winHeight, 
+		SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, scrWidth, scrHeight, 
 		window_flags);
 
 	//variable that stores window manager information
@@ -28,7 +32,7 @@ bool App::Init()
 	//Sets window style, allowing it to be transparent
 	SetWindowLong(hwnd, GWL_EXSTYLE, GetWindowLong(hwnd, GWL_EXSTYLE) | WS_EX_LAYERED);
 	// sets the window info of hwnd, LWA_COLORKEY sets it to transparent 0, 0, 0 color key is black, so any pixels matching will be transparent
-	SetLayeredWindowAttributes(hwnd, 0, 0, LWA_COLORKEY);
+	SetLayeredWindowAttributes(hwnd, 0, 1, LWA_COLORKEY);
 
 	renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
 
@@ -42,7 +46,6 @@ bool App::Init()
 
 	ImGui_ImplSDL2_InitForSDLRenderer(window, renderer);
 	ImGui_ImplSDLRenderer2_Init(renderer); 
-	
 	
 	return false;
 }
@@ -71,8 +74,6 @@ bool App::Run()
 		ImGui_ImplSDL2_NewFrame();
 		ImGui::NewFrame();
 		
-		ImGui::SetNextWindowPos(ImVec2(0, 0));
-
 		// EXECUTING CODE HERE
 		{
 			ExecuteCode();

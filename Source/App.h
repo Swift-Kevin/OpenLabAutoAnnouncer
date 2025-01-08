@@ -19,6 +19,8 @@ private:
 	// Screen and Window Items
 	int winWidth = 0;
 	int winHeight = 0;
+	int scrWidth = 0;
+	int scrHeight = 0;
 	std::string winTitle = "";
 
 public:
