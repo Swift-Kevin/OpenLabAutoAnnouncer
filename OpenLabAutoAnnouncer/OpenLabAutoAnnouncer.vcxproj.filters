@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="ImGui">
-      <UniqueIdentifier>{7bf8ff53-2685-44cf-9db4-a94629c3f2f3}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -19,33 +16,13 @@
     <ClCompile Include="..\Source\Configs.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\Source\OpenLabAutoAnnouncer.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_demo.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_draw.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_impl_sdl2.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_impl_sdlrenderer2.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_tables.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
-    <ClCompile Include="..\ImGui\imgui_widgets.cpp">
-      <Filter>ImGui</Filter>
-    </ClCompile>
     <ClCompile Include="..\Source\App.cpp">
       <Filter>Source\RunnerCode</Filter>
     </ClCompile>
+    <ClCompile Include="..\Source\MainWindow.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="scroll.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Source\Configs.h">
@@ -53,30 +30,6 @@
     </ClInclude>
     <ClInclude Include="..\Source\Utilities.h">
       <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imconfig.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imgui.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imgui_impl_sdl2.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imgui_impl_sdlrenderer2.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imgui_internal.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imstb_rectpack.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imstb_textedit.h">
-      <Filter>ImGui</Filter>
-    </ClInclude>
-    <ClInclude Include="..\ImGui\imstb_truetype.h">
-      <Filter>ImGui</Filter>
     </ClInclude>
     <ClInclude Include="..\Source\inicpp.h">
       <Filter>Ini</Filter>
@@ -87,11 +40,17 @@
     <ClInclude Include="..\Source\App.h">
       <Filter>Source\RunnerCode</Filter>
     </ClInclude>
+    <ClInclude Include="..\Source\MainWindow.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Source\CoursePanel.h">
+      <Filter>Source</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="defaults.ini">
       <Filter>Ini</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>

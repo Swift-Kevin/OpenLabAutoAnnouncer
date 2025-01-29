@@ -16,3 +16,4 @@
 *.recipe
 *.[Dd][Ss]_[Ss]tore
 /.vs
+/Binaries

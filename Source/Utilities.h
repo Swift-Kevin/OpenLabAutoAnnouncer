@@ -49,4 +49,15 @@ public:
 
         return retVal;
     }
+
+    static int CustomSTOI(const char* str, int size)
+    {
+        int total = 0;
+        for (int i = 0; i < size; ++i)
+        {
+            total += (int)(str[i]);
+        }
+
+        return total;
+    }
 };

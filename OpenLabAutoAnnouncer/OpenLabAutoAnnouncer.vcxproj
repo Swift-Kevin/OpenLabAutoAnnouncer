@@ -19,30 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\ImGui\imgui.cpp" />
-    <ClCompile Include="..\ImGui\imgui_demo.cpp" />
-    <ClCompile Include="..\ImGui\imgui_draw.cpp" />
-    <ClCompile Include="..\ImGui\imgui_impl_sdl2.cpp" />
-    <ClCompile Include="..\ImGui\imgui_impl_sdlrenderer2.cpp" />
-    <ClCompile Include="..\ImGui\imgui_tables.cpp" />
-    <ClCompile Include="..\ImGui\imgui_widgets.cpp" />
     <ClCompile Include="..\Source\App.cpp" />
     <ClCompile Include="..\Source\Configs.cpp" />
-    <ClCompile Include="..\Source\OpenLabAutoAnnouncer.cpp" />
+    <ClCompile Include="..\Source\MainWindow.cpp" />
+    <ClCompile Include="scroll.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\ImGui\imconfig.h" />
-    <ClInclude Include="..\ImGui\imgui.h" />
-    <ClInclude Include="..\ImGui\imgui_impl_sdl2.h" />
-    <ClInclude Include="..\ImGui\imgui_impl_sdlrenderer2.h" />
-    <ClInclude Include="..\ImGui\imgui_internal.h" />
-    <ClInclude Include="..\ImGui\imstb_rectpack.h" />
-    <ClInclude Include="..\ImGui\imstb_textedit.h" />
-    <ClInclude Include="..\ImGui\imstb_truetype.h" />
     <ClInclude Include="..\Source\App.h" />
     <ClInclude Include="..\Source\Configs.h" />
+    <ClInclude Include="..\Source\CoursePanel.h" />
     <ClInclude Include="..\Source\Defines.h" />
     <ClInclude Include="..\Source\inicpp.h" />
+    <ClInclude Include="..\Source\MainWindow.h" />
     <ClInclude Include="..\Source\Utilities.h" />
   </ItemGroup>
   <ItemGroup>
@@ -136,11 +124,13 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
+      <AdditionalIncludeDirectories>$(SolutionDir)Binaries\include;$(SolutionDir)Binaries\include\msvc</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Binaries\lib\vc_x64_lib</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
