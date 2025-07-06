@@ -18,6 +18,8 @@ private:
 	wxTextCtrl* announcementOutput = nullptr;
 	wxButton* copyButton = nullptr;
 
+	wxScrolledWindow* scrollWin = nullptr;
+
 	int winWidth = 0, winHeight = 0;
 	
 	std::map<std::string, CourseInfo> coursemap;

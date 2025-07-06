@@ -12,10 +12,16 @@ MainWindow::MainWindow() : wxFrame(nullptr, wxID_ANY, "Application", wxPoint(50,
 	mainBoxSizer->SetMinSize(wxSize(winWidth * 0.5f, winHeight));
 	coursesSidebarSizer = new wxBoxSizer(wxVERTICAL);
 
+	scrollWin = new wxScrolledWindow(this, wxID_ANY, 
+		wxPoint(this->GetSize().x * 0.5f, 0), 
+		wxSize(GetSize().x * 0.5f, GetSize().y));
+
 	ReadCoursesToButtons();
 	AddAnnouncementMaker();
 
-	mainBoxSizer->Add(coursesSidebarSizer);
+	//mainBoxSizer->Add(coursesSidebarSizer);
+	scrollWin->SetSizer(coursesSidebarSizer);
+	this->AddChild(scrollWin);
 	this->SetSizerAndFit(mainBoxSizer);
 	this->Layout();
 }
@@ -36,7 +42,7 @@ void MainWindow::InitAppFromConfig()
 
 void MainWindow::AddCourseSection(CourseInfo& course)
 {
-	CoursePanel* coursePanel = new CoursePanel(this, course.title, EVENT_EditCourseButton, course.courseID);
+	CoursePanel* coursePanel = new CoursePanel(scrollWin, course.title, EVENT_EditCourseButton, course.courseID);
 	coursesSidebarSizer->Add(coursePanel, 0, wxEXPAND | wxALL, 2);
 }
 
